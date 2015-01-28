@@ -1,0 +1,12 @@
+<form action="/urls" method="post">
+  <input type="text" name="url[original]">
+  <input type="submit" value="SHORTEN">
+</form>
+
+<br>
+<% @url.each do |link| %>
+<%= link.original %><br>
+<a href='http://127.0.0.1:9393/<%=link.short%>'>http://127.0.0.1:9393/<%=link.short%></a><br><br>
+<% end %>
+
+
